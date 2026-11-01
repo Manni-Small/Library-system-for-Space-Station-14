@@ -1,5 +1,7 @@
 # Library System for Space Station 14
 
+YT demonstration video: https://www.youtube.com/watch?v=C4PSlJOp9LU&t=245s
+
 A full library for the station, inspired by tgstation's library: a book archive that lasts between rounds, machines to print, scan and upload books, an inventory that notices when books go missing, pinpointers to find them, a request console for the crew, and a review queue so admins decide what ends up in the archive.
 
 Made for OmuStation, and also will be made available as a package for any other SS14 fork if requested.
