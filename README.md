@@ -95,6 +95,7 @@ Uploaded books waiting for review are kept as files in `UserData/library` until 
 
 * **OmuStation:** apply `omustation-library-system.patch`.
 * **Any other fork:** use the universal package: `./install.sh /path/to/your/fork`.
+* **OTHER FORKS NEED TESTING**
 
 Both come with a README. The code is AGPL-3.0-or-later.
 
