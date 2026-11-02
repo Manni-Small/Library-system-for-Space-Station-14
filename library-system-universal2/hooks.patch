@@ -1,0 +1,80 @@
+diff --git a/Resources/Prototypes/Access/service.yml b/Resources/Prototypes/Access/service.yml
+index 7ccba7b50..6583c8c50 100644
+--- a/Resources/Prototypes/Access/service.yml
++++ b/Resources/Prototypes/Access/service.yml
+@@ -40,6 +40,7 @@
+   - Kitchen
+   - Hydroponics
+   - Service
++  - Library # Library system
+   - Janitor
+   - Theatre
+   - Chapel
+diff --git a/Resources/Prototypes/Catalog/Fills/Crates/service.yml b/Resources/Prototypes/Catalog/Fills/Crates/service.yml
+index fc9961529..8e23cba52 100644
+--- a/Resources/Prototypes/Catalog/Fills/Crates/service.yml
++++ b/Resources/Prototypes/Catalog/Fills/Crates/service.yml
+@@ -233,12 +233,12 @@
+   parent: CrateGenericSteel
+   id: CrateServiceBooks
+   name: books crate
+-  description: Contains 10 empty books of random appearance.
++  description: Contains 10 random books of the library archive.
+   components:
+   - type: EntityTableContainerFill
+     containers:
+       entity_storage:
+-        id: BookRandom
++        id: BookRandomArchive
+         amount: 10
+ 
+ - type: entity
+diff --git a/Resources/Prototypes/Catalog/Fills/Items/toolboxes.yml b/Resources/Prototypes/Catalog/Fills/Items/toolboxes.yml
+index fff6f3053..f958bf8ec 100644
+--- a/Resources/Prototypes/Catalog/Fills/Items/toolboxes.yml
++++ b/Resources/Prototypes/Catalog/Fills/Items/toolboxes.yml
+@@ -83,7 +83,7 @@
+           prob: 0.5
+         - id: MysteryFigureBox
+           prob: 0.5
+-        - id: BookRandom
++        - id: BookRandomArchive
+           amount: 2
+         - id: CrayonMime
+         - id: CrayonRainbow
+diff --git a/Resources/Prototypes/Entities/Objects/Misc/books.yml b/Resources/Prototypes/Entities/Objects/Misc/books.yml
+index 118c35d61..626b24dbe 100644
+--- a/Resources/Prototypes/Entities/Objects/Misc/books.yml
++++ b/Resources/Prototypes/Entities/Objects/Misc/books.yml
+@@ -96,6 +96,7 @@
+     tags:
+     - Book
+     - Paper # Goobstation - Moth food
++    - LibraryGuidebook # Library system, the library console lists and prints guidebooks
+   - type: GuideHelp
+     openOnActivation: true
+     guides:
+diff --git a/Resources/Prototypes/Entities/Structures/Furniture/bookshelf.yml b/Resources/Prototypes/Entities/Structures/Furniture/bookshelf.yml
+index f9253a0e1..e4ade86a6 100644
+--- a/Resources/Prototypes/Entities/Structures/Furniture/bookshelf.yml
++++ b/Resources/Prototypes/Entities/Structures/Furniture/bookshelf.yml
+@@ -57,6 +57,7 @@
+   - type: Anchorable
+   - type: Pullable
+   - type: Occluder
++  - type: ArchiveBookshelf # Library system
+   - type: Storage
+     grid:
+     - 0,0,9,3
+diff --git a/Resources/Prototypes/Entities/Structures/Machines/lathe.yml b/Resources/Prototypes/Entities/Structures/Machines/lathe.yml
+index c2310a5dd..d085c64ce 100644
+--- a/Resources/Prototypes/Entities/Structures/Machines/lathe.yml
++++ b/Resources/Prototypes/Entities/Structures/Machines/lathe.yml
+@@ -155,6 +155,7 @@
+     - AtmosStatic
+     - CablesStatic
+     - PaperworkStatic
++    - LibraryPaperStatic # Library system
+     - TowelsStatic
+     #- CargoStatic Goob edit - Moved to Cargo fab
+     - MaterialsStatic
