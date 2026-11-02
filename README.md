@@ -70,7 +70,7 @@ Machines are linked with a network configurator, and the librarian starts with o
 When a PDA with NanoChat is available, the library messages the person directly:
 
 * Overdue: *"Your book is overdue, please return it back to the library."*
-* Accepted request: *"Your book request is ready, either come to library or request someone to pick it up on your behalf."*
+* Accepted request: *"Your book request was accepted"*
 * Denied request: *"Your book request was denied."*
 
 On forks without NanoChat nothing is sent, or an adapter can send it to whatever messenger the fork has.
